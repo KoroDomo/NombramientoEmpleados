@@ -7,6 +7,7 @@ namespace Nombramiento_Empleado
         static void Main(string[] args)
         {
             Empleados empleado = Creador.CreadorEmpleado(Creador.TC);
+            
             Console.WriteLine(empleado.ToString());
         }
     }

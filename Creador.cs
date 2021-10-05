@@ -13,11 +13,12 @@ namespace Nombramiento_Empleado
             switch(tipo)
             {
                 case TC:
-                    return new TiempoCompleto();
+                    return new TiempoCompleto(8, 400, 12346789);
                 case MT:
-                    return new MedioTiempo();
+                    return new MedioTiempo(4, 350, 9999999);
                 case T:
-                    return new Temporero();
+
+                    return new Temporero(8, 450);
                 default:
                     return null;
             }

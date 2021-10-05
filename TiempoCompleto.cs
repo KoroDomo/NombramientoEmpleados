@@ -2,29 +2,44 @@ using System;
 
 namespace Nombramiento_Empleado
 {
-    class TiempoCompleto : Empleados
+    class TiempoCompleto : Empleados, IEmpleados
     {
-        public override string tipo()
+        public string dateTime;
+        public string nombre;
+        public string departamento;
+        public string cargo;
+        public double salario;
+        public string tipo;
+
+        public TiempoCompleto(int horas, double precio, int nCuenta) : base(horas, precio, nCuenta)
         {
-            return "Tiempo Completo";
+            this.dateTime = "10/5/2021 5:36 PM";
+            this.nombre = "Fulano De Tal";
+            this.departamento = "IT";
+            this.cargo = "Supervisor";
+            this.salario = 20000.00;
+            this.tipo = "Tiempo Completo"; 
+                       
         }
-        public override int horasTrabajadas()
-        {
-            return 8;
-        }
-        public override double precioPorHora()
-        {
-            return 500.50;
-        }
-        public override int numeroCuenta()
+        
+        /*public override int numeroCuenta()
         {
             Random r = new Random();
             return r.Next(10000, 100000);
+        }*/
+
+        public void hacerLog()
+        {
+            Console.WriteLine("Fecha y hora de creacion: " + dateTime);
+            Console.WriteLine("Nombre del empleado: " + nombre);
+            Console.WriteLine("Departamento: " + departamento);
+            Console.WriteLine("Cargo: " + cargo);
+            Console.WriteLine("Salario: " + salario);
         }
 
         public override string  ToString()
         {
-            return "Tipo: " + tipo() + " || " + "Horas Trabajadas: " + horasTrabajadas() + " || " + " Precio Por Hora: " + precioPorHora() + " || " + "No. de Cuenta: " + numeroCuenta();
+            return "Tipo: " + tipo + " || " + "Horas Trabajadas: " + HorasTrabajadas + " || " + " Precio Por Hora: " + PrecioPorHora + " || " + "No. de Cuenta: " + NumeroCuenta;
         }
     }
 }
