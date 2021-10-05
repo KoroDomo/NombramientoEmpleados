@@ -17,7 +17,6 @@ namespace Nombramiento_Empleado
                 case MT:
                     return new MedioTiempo(4, 350, 9999999);
                 case T:
-
                     return new Temporero(8, 450);
                 default:
                     return null;
